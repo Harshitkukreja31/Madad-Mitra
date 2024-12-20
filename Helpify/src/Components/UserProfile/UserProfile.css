@@ -1,0 +1,97 @@
+/* UserProfile.css */
+.user-profile-container {
+    background-color: #f4f6f9;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  
+  .profile-wrapper {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  
+  .nav-tabs .nav-link {
+    color: #6c757d;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-tabs .nav-link.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .avatar-lg {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #e9ecef;
+  }
+  
+  .info-card {
+    background-color: #f8f9fa;
+    border: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .service-card {
+    border-left: 4px solid #007bff;
+    transition: all 0.3s ease;
+  }
+  
+  .service-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .profile-wrapper {
+      padding: 1rem;
+    }
+  
+    .nav-tabs {
+      flex-direction: column;
+    }
+  
+    .nav-tabs .nav-link {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .avatar-lg {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .upload-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .avatar-container:hover .upload-overlay {
+    opacity: 1;
+  }
+
+  .info-card {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .info-card:hover {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  }
