@@ -1,0 +1,149 @@
+.timeline-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
+    background: linear-gradient(to bottom, #f9fafb, #ffffff);
+  }
+
+  .header-section {
+    text-align: center;
+    margin-bottom: 4rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .header-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .gradient-text {
+    font-size: 2.25rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #2563eb, #14b8a6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+  }
+
+  .gradient-line {
+    height: 4px;
+    width: 12rem;
+    margin: 0 auto;
+    background: linear-gradient(to right, #2563eb, #14b8a6);
+    border-radius: 9999px;
+  }
+
+  .timeline-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .step-column {
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .timeline-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .timeline-step:hover {
+    transform: translateY(-2px);
+  }
+
+  .timeline-arrow {
+    width: 100%;
+    max-width: 280px;
+    height: 44px;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .arrow-content {
+    position: absolute;
+    inset: 0;
+    background: var(--step-color);
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%, 15px 50%);
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+
+  .timeline-step:hover .arrow-content {
+    transform: scale(1.05);
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    color: white;
+    margin-left: 50px;
+  }
+
+  .step-text {
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .step-number {
+    color: white;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+
+  .step-header {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .step-description {
+    padding: 0 1rem;
+  }
+
+  .step-description p {
+    font-size: 0.875rem;
+    color: #4b5563;
+    text-align: center;
+    transition: color 0.3s ease;
+  }
+
+  .timeline-step:hover .step-description p {
+    color: #111827;
+  }
+
+  @media (max-width: 768px) {
+    .timeline-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .step-column {
+      width: 100%;
+    }
+
+    .gradient-text {
+      font-size: 1.875rem;
+    }
+  }
