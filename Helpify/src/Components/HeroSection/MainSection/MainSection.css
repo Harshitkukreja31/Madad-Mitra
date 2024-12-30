@@ -1,0 +1,274 @@
+.movie-container {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+
+  .content-wrapper {
+    transition: opacity 0.5s ease-out;
+  }
+
+  .title-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+    transition: opacity 0.5s ease-out;
+  }
+
+  .overlay-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    transition: transform 0.5s ease-out;
+  }
+
+  .main-title {
+    color: white;
+    font-size: 3.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+  }
+
+  .film-strip {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 48px;
+    background-color: #000;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  .left-strip { left: 0; }
+  .right-strip { right: 0; }
+
+  .film-hole {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgb(31, 41, 55);
+    margin: 0 auto;
+  }
+
+  .reels-container {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .reel-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 260px;
+    background-color: #000;
+  }
+
+  .reel {
+    display: flex;
+    padding: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%);
+      opacity: 1;
+    }
+  }
+
+  .slide-from-left {
+    animation: slideFromLeft 20s linear infinite;
+  }
+
+  .slide-from-right {
+    animation: slideFromRight 20s linear infinite;
+  }
+
+  .reel-wrapper:hover .slide-from-left,
+  .reel-wrapper:hover .slide-from-right {
+    animation-play-state: paused;
+  }
+
+  .movie-card {
+    flex-shrink: 0;
+    width: 300px;
+  }
+
+  .movie-inner {
+    padding: 0.5rem;
+  }
+
+  .movie-content {
+    background-color: rgb(31, 41, 55);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: transform 0.5s;
+  }
+
+  .movie-content:hover {
+    transform: scale(1.1);
+  }
+
+  .movie-image {
+    width: 100%;
+    height: 192px;
+    object-fit: contain;
+  }
+
+  .movie-info {
+    padding: 0.75rem;
+  }
+
+  .movie-title {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .movie-genre {
+    color: rgb(156, 163, 175);
+    font-size: 0.875rem;
+  }
+
+  .reel-separator {
+    height: 16px;
+    background-color: #000;
+  }
+
+  .gradient-overlays {
+    position: absolute;
+    top: 0;
+    left: 48px;
+    right: 48px;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .gradient-left,
+  .gradient-right {
+    position: absolute;
+    width: 96px;
+    height: 100%;
+  }
+
+  .gradient-left {
+    left: 0;
+    background: linear-gradient(to right, rgb(17, 24, 39), transparent);
+  }
+
+  .gradient-right {
+    right: 0;
+    background: linear-gradient(to left, rgb(17, 24, 39), transparent);
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .movie-card {
+      width: 240px;
+    }
+
+    .movie-image {
+      height: 160px;
+    }
+
+    .film-strip {
+      width: 32px;
+    }
+
+    .film-hole {
+      width: 16px;
+      height: 16px;
+    }
+
+    .reels-container {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    .gradient-overlays {
+      left: 32px;
+      right: 32px;
+    }
+
+    .main-title {
+      font-size: 2.5rem;
+    }
+
+    .overlay-content {
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .movie-card {
+      width: 200px;
+    }
+
+    .movie-image {
+      height: 140px;
+    }
+
+    .reel-wrapper {
+      height: 280px;
+    }
+
+    .film-strip {
+      width: 24px;
+    }
+
+    .film-hole {
+      width: 12px;
+      height: 12px;
+    }
+
+    .reels-container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .gradient-overlays {
+      left: 24px;
+      right: 24px;
+    }
+
+    .main-title {
+      font-size: 2rem;
+    }
+
+    .overlay-content {
+      padding: 1rem;
+    }
+  }
