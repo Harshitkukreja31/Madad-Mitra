@@ -1,0 +1,141 @@
+.hiring-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-section {
+  padding: 2rem 0;
+}
+
+.feature-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+}
+
+.image-wrapper {
+  position: relative;
+  padding: 2rem;
+}
+
+.image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 1.5rem;
+  transform: rotate(3deg) scale(1.05);
+  z-index: 1;
+}
+
+.image-wrapper img {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.5s ease;
+  height: 10rem;
+  width: 40rem;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.05);
+}
+
+.language-toggle button {
+  width: 3rem;
+  height: 3rem;
+  transition: all 0.3s ease;
+}
+
+.language-toggle button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 991.98px) {
+  .content-section {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+
+  .language-toggle {
+    position: relative !important;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .content-section {
+    padding: 3rem 1rem;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+.image-wrapper {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.image-wrapper img {
+  transition: transform 0.5s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0,123,255,0.1), rgba(0,123,255,0));
+  pointer-events: none;
+}
+
+.language-toggle button{
+  margin-left: 50px;
+}
+
+
+
+
