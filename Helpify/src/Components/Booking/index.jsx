@@ -86,7 +86,7 @@ const Booking = ({service}) => {
     };
 
   return (
-    <div className="container-fluid min-vh-100 bg-light">
+    <div className="container-fluid  bg-light">
       <div className="container py-4">
         {showheader && <Header 
           title={getHeaderTitle()} 
