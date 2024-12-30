@@ -26,13 +26,16 @@ const userSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
+    avatar: {
+      type: String
+    }
   });
   
   const UserModel = mongoose.model("user", userSchema);
   
   UserModel.getUser = async (req, successCallback, errorCallback) => {
     
-    const emailFromReq = req?.params?.email;
+    const emailFromReq =  req?.emailFromAuthToken;
     const emailFromAuthToken = req?.emailFromAuthToken;
     
     // console.log("The req.emailFromAuthToken is: ", req.emailFromAuthToken);
