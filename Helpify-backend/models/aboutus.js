@@ -12,7 +12,7 @@ const TeamMemberSchema = new mongoose.Schema({
  const teamMember = [
     {
       "name": "Deepanshu",
-      "image": "/api/placeholder/120/120",
+      "image": "../../../src/assets/images/Avatar/Avatar1.jpg",
       "role": "Co-Founder & CEO",
       "description": "IIT Delhi Graduate, Ex-Google, 10+ years in tech",
       "linkedin": "https://linkedin.com",
@@ -20,7 +20,7 @@ const TeamMemberSchema = new mongoose.Schema({
     },
     {
       "name": "Harshit Kukreja",
-      "image": "/api/placeholder/120/120",
+      "image": "../../../src/assets/images/Avatar/Avatar2.png",
       "role": "Co-Founder & COO",
       "description": "IIM Ahmedabad, Former McKinsey Consultant",
       "linkedin": "https://linkedin.com",
@@ -28,7 +28,7 @@ const TeamMemberSchema = new mongoose.Schema({
     },
     {
       "name": "Dr. Amit Kumar",
-      "image": "/api/placeholder/120/120",
+      "image": "../../../src/assets/images/Avatar/Avatar1.jpg",
       "role": "Technical Advisor",
       "description": "PhD from MIT, 15+ years in service marketplace",
       "linkedin": "https://linkedin.com",
@@ -36,7 +36,7 @@ const TeamMemberSchema = new mongoose.Schema({
     },
     {
       "name": "Maya Singh",
-      "image": "/api/placeholder/120/120",
+      "image": "../../../src/assets/images/Avatar/Avatar2.png",
       "role": "Strategic Advisor",
       "description": "Former CEO of ServiceHub, Angel Investor",
       "linkedin": "https://linkedin.com",
@@ -44,7 +44,7 @@ const TeamMemberSchema = new mongoose.Schema({
     },
     {
       "name": "Vikram Reddy",
-      "image": "/api/placeholder/120/120",
+      "image": "../../../src/assets/images/Avatar/Avatar1.jpg",
       "role": "Head of Operations",
       "description": "Ex-Uber, Specialist in scaling operations",
       "linkedin": "https://linkedin.com",
@@ -52,7 +52,7 @@ const TeamMemberSchema = new mongoose.Schema({
     },
     {
       "name": "Anita Desai",
-      "image": "/api/placeholder/120/120",
+      "image": "../../../src/assets/images/Avatar/Avatar1.jpg",
       "role": "Customer Success Lead",
       "description": "8+ years in customer experience management",
       "linkedin": "https://linkedin.com",
@@ -60,7 +60,7 @@ const TeamMemberSchema = new mongoose.Schema({
     },
     {
       "name": "Raj Malhotra",
-      "image": "/api/placeholder/120/120",
+      "image": "../../../src/assets/images/Avatar/Avatar2.png",
       "role": "CTO",
       "description": "Full-stack developer, AWS certified architect",
       "linkedin": "https://linkedin.com",
