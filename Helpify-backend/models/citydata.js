@@ -23,11 +23,11 @@ const insertCitiesIfNotExists = async () => {
         }, 
         { 
           "name": "Mohali", 
-          "image": "../../../src/assets/images/Location/chandigarh.png" 
+          "image": "../../../src/assets/images/Location/mohali.jpg" 
         }, 
         { 
           "name": "Panchkula", 
-          "image": "../../../src/assets/images/Location/chandigarh.png" 
+          "image": "../../../src/assets/images/Location/panchkula.jpg" 
         } 
       ];
       // Insert cities only if no cities exist
