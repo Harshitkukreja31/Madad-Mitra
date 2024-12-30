@@ -315,8 +315,8 @@ const AddressSelector = ({selectedAddress , setSelectedAddress}) => {
               )}
               {/* Map View */}
               {showMap && (
-                <div className="card mb-4">
-                  <div className="card-body">
+                <div className=" mb-4">
+                  <div >
                     <div style={{ height: '400px', width: '100%' }}>
                       <MapContainer
                         center={mapCenter}
@@ -346,8 +346,8 @@ const AddressSelector = ({selectedAddress , setSelectedAddress}) => {
               )}
               {/* New Address Form */}
               {showNewAddressForm && (
-                <div className="card">
-                  <div className="card-body">
+                <div >
+                  <div >
                     {/* Address Type Selection */}
                     <div className="mb-3">
                       <label className="form-label">Select Address Type</label>
