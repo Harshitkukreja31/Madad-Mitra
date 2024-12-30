@@ -1,7 +1,9 @@
 import React from 'react';
 import { CheckCircle, XCircle } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const OrderSuccess = ({ orderDetails }) => {
+  const navigate = useNavigate();
   return (
     <div className="text-center p-5 bg-white rounded shadow">
       <CheckCircle 
@@ -20,7 +22,7 @@ const OrderSuccess = ({ orderDetails }) => {
       
       <button 
         className="btn btn-success"
-        onClick={() => window.location.href = '/dashboard'}
+        onClick={() => navigate('/')}
       >
         Go to Dashboard
       </button>
