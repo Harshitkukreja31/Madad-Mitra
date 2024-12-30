@@ -23,7 +23,7 @@ export const signInHandler = async (event) => {
 
     if (formValuesObject.email && formValuesObject.password) {
       console.log("Submit this form");
-      const signInResponse = await fetch("http://localhost:8080/user/signin", {
+      const signInResponse = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/user/signin", {
         method: "POST",
         body: JSON.stringify(formValuesObject),
         headers: {
@@ -48,7 +48,7 @@ export const signInHandler = async (event) => {
 
  export const fetchUserDetails = async () => {
     let email = localStorage.getItem("loggedInUserEmail");
-    var productsResponse = await fetch(`http://localhost:8080/user/${email}`, {
+    var productsResponse = await fetch(`http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/user/${email}`, {
       headers: {
         Authorization: localStorage.getItem("authToken"),
       },
@@ -86,7 +86,7 @@ export const signUpHandler = async (event) => {
       console.log("Submit this form");
 
       // Make an api/web service call to submit the user details
-      var response = await fetch("http://localhost:8080/user", {
+      var response = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/user", {
         method: "POST",
         body: JSON.stringify({ ...formValuesObject }),
         headers: {

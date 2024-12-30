@@ -10,7 +10,7 @@ const AboutUs = () => {
 
   const fetchteammemberdetails = async()=>{
     try {
-      const response = await fetch("http://localhost:8084/teammember");
+      const response = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/teammember");
       const data = await response.json();
       setteammember(data);
     } catch (error) {

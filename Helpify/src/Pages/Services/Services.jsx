@@ -17,7 +17,7 @@ const Services = () => {
 
 
   const fetchservicedetails = async () =>{
-    const resp = await fetch(`http://localhost:8084/servicedata/${serviceType}`);
+    const resp = await fetch(`http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/servicedata/${serviceType}`);
     const details = await resp.json();
     console.log(details[0]);
     if(resp.ok && resp.status === 200){
@@ -37,7 +37,7 @@ useEffect(()=>{
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const url = `http://localhost:8084/services/${serviceType}`;
+        const url = `http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/services/${serviceType}`;
 
         const response = await fetch(url);
         

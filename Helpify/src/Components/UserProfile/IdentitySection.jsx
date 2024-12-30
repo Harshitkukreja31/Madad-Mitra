@@ -18,7 +18,7 @@ const IdentitySection = () => {
         const userEmail = userDetails[0].email;
 
         const token = localStorage.getItem('authToken');
-        const response = await fetch("http://localhost:8084/user/userData",{
+        const response = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/user/userData",{
           headers:{
             'Authorization':token
           }
@@ -70,7 +70,7 @@ const IdentitySection = () => {
       formData.append('avatar', file);
       formData.append('userId', userId);
 
-      const response = await fetch('http://localhost:8084/user/upload/avatar', {
+      const response = await fetch('http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/user/upload/avatar', {
         method: 'POST',
         body: formData,
       });

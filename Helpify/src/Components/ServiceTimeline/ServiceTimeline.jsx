@@ -16,7 +16,7 @@ const ServiceTimeline = () => {
     const fetchTimelineSteps = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch('http://localhost:8084/serviceTimeline');
+        const response = await fetch('http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/serviceTimeline');
        
         if (!response.ok) {
           throw new Error('Network response was not ok');

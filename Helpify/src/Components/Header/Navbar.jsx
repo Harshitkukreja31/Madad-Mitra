@@ -59,7 +59,7 @@ const Navbar = () => {
 
       try {
         const token = localStorage.getItem('authToken');
-        const response = await fetch("http://localhost:8084/user/userData", {
+        const response = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/user/userData", {
           headers: {
             'Authorization': token
           }

@@ -34,7 +34,7 @@ const index = ({ formData, dateData , subScriptiondata , price , setshowheader})
   const fetchSavedAddresses = async()=>{
     try{
       const token = localStorage.getItem('authToken');
-      const response = await fetch("http://localhost:8084/address",{
+      const response = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/address",{
         headers:{
           'Authorization':token
         }
@@ -92,7 +92,7 @@ const index = ({ formData, dateData , subScriptiondata , price , setshowheader})
     const handlesubscription = async()=>{
       try{
         const token = localStorage.getItem('authToken');
-        const response = await fetch("http://localhost:8084/usersubscription", {
+        const response = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/usersubscription", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -128,7 +128,7 @@ const index = ({ formData, dateData , subScriptiondata , price , setshowheader})
         razorpay_payment_id:payment_id
       };
       const token = localStorage.getItem('authToken');
-      const response = await fetch("http://localhost:8084/bookingdata", {
+      const response = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/bookingdata", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -153,7 +153,7 @@ const index = ({ formData, dateData , subScriptiondata , price , setshowheader})
 
     const handlePayment = async () => {
       try {
-          const response = await fetch('http://localhost:8084/create-order', {
+          const response = await fetch('http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/create-order', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ amount: Amount, currency: 'INR' }) 

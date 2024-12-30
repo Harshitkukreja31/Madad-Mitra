@@ -31,7 +31,7 @@ const ServiceCarousel = () => {
     const fetchSlides = async () => {
       try {
        
-        const response = await fetch('http://localhost:8084/serviceCarousel');
+        const response = await fetch('http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/serviceCarousel');
         
         if (!response.ok) {
           throw new Error('Network response was not ok');

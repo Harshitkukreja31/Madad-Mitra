@@ -79,7 +79,7 @@ const WorkerRegistration = () => {
       localStorage.setItem('phoneNumber', phoneNumber);
 
       // Fetch API call to submit personal information
-      const response = await fetch('http://localhost:8084/newworkers/register', {
+      const response = await fetch('http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/newworkers/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ const WorkerRegistration = () => {
       
       if (response.status === 201) {
         // Generate OTP after successful personal info submission
-        const otpResponse = await fetch('http://localhost:8084/newworkers/send-otp', {
+        const otpResponse = await fetch('http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/newworkers/send-otp', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -138,7 +138,7 @@ const WorkerRegistration = () => {
         throw new Error('OTP must be 6 digits');
       }
 
-      const response = await fetch('http://localhost:8084/newworkers/verify-otp', {
+      const response = await fetch('http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/newworkers/verify-otp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -198,7 +198,7 @@ const WorkerRegistration = () => {
         phoneNumber
       };
 
-      const response = await fetch('http://localhost:8084/hiring/apply', {
+      const response = await fetch('http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/hiring/apply', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

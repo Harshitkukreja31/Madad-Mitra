@@ -39,7 +39,7 @@ const AddressSelector = ({selectedAddress , setSelectedAddress}) => {
   const fetchSavedAddresses = async()=>{
     try{
       const token = localStorage.getItem('authToken');
-      const response = await fetch("http://localhost:8084/address",{
+      const response = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/address",{
         headers:{
           'Authorization':token
         }
@@ -189,7 +189,7 @@ const AddressSelector = ({selectedAddress , setSelectedAddress}) => {
     };
     try {
       const token = localStorage.getItem('authToken');
-      const response = await fetch("http://localhost:8084/address", {
+      const response = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/address", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

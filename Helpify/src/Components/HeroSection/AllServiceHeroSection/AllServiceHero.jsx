@@ -13,7 +13,7 @@ const AllServiceHero = () => {
     const fetchServices = async () => {
       try {
         // Replace with your actual backend API endpoint
-        const response = await fetch('http://localhost:8084/allServices/');
+        const response = await fetch('http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/allServices/');
 
         if (!response.ok) {
           throw new Error('Failed to fetch services');

@@ -66,7 +66,7 @@ const AuthForm = ({ isOpen, onClose }) => {
 
     if (formValuesObject.email && formValuesObject.password) {
       try {
-        const signInResponse = await fetch("http://localhost:8084/user/signin", {
+        const signInResponse = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/user/signin", {
           method: "POST",
           body: JSON.stringify(formValuesObject),
           headers: {
@@ -100,7 +100,7 @@ const AuthForm = ({ isOpen, onClose }) => {
   const fetchUserDetails = async () => {
     let email = localStorage.getItem("loggedInUserEmail");
     try {
-      const productsResponse = await fetch(`http://localhost:8084/user/${email}`, {
+      const productsResponse = await fetch(`http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/user/${email}`, {
         headers: {
           Authorization: localStorage.getItem("authToken"),
         },
@@ -137,7 +137,7 @@ const AuthForm = ({ isOpen, onClose }) => {
       formValuesObject.password
     ) {
       try {
-        const response = await fetch("http://localhost:8084/user", {
+        const response = await fetch("http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/user", {
           method: "POST",
           body: JSON.stringify(formValuesObject),
           headers: {

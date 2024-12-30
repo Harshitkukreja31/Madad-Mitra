@@ -43,7 +43,7 @@ const Booking = ({service}) => {
 
     const fetchCityData = async () => {
         try {
-        const response = await fetch('http://localhost:8084/city');
+        const response = await fetch('http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8084/city');
         const data = await response.json();
         setCityData(data);
         } catch (error) {
