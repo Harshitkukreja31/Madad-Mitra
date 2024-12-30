@@ -231,3 +231,19 @@
   outline: none;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
 }
+
+/* Logo styling */
+.navbar-brand img {
+  height: 45px;
+  width: 150px;
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Ensure logo scales properly on mobile */
+@media (max-width: 768px) {
+  .navbar-brand img {
+    height: 35px;
+  }
+}
