@@ -76,6 +76,14 @@ Through its subscription-based model, Madad-Mitra ensures consistent service del
 - Profile creation
 - Service management
 
+## How It Works
+
+
+
+![Alt text](flowchart/Picture1.png)
+
+This flowchart illustrates the intricate web of Madad-Mitra's functionality. 
+
 ### Support
 - About Us page
 - Contact Us page for assistance
@@ -120,6 +128,12 @@ Through its subscription-based model, Madad-Mitra ensures consistent service del
    cd Helpify
    nodemon index.js
    ```
+
+## Deployment
+
+Madad-Mitra is now live and accessible to everyone! You can visit our deployed application at:
+
+[http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8080/](http://ec2-13-61-26-86.eu-north-1.compute.amazonaws.com:8080/)
 
 ## Contributing
 
